@@ -6,10 +6,10 @@ This project lays the foundation for an autonomous butler robot designed to oper
 The repository contains a simulated café environment built in Gazebo, a differential drive robot model, and the necessary configurations to perform point-to-point autonomous navigation. The robot can successfully navigate between predefined locations such as a "home" position, the "kitchen," and customer tables. This project serves as the essential first step in developing a fully functional robotic butler.
 
 # Features
-1.Custom Gazebo Environment: A simulated café world with a kitchen area and tables.
-2.Robot Integration: A differential drive robot model is successfully loaded and integrated into the simulation.
-3.Autonomous Navigation: Utilizes the ROS 2 Nav2 stack to enable the robot to navigate to any specified goal within the mapped environment while performing dynamic obstacle avoidance.
-4.Localization: Employs the AMCL (Adaptive Monte Carlo Localization) package to track the robot's position on the map.
+* Custom Gazebo Environment: A simulated café world with a kitchen area and tables.
+* Robot Integration: A differential drive robot model is successfully loaded and integrated into the simulation.
+* Autonomous Navigation: Utilizes the ROS 2 Nav2 stack to enable the robot to navigate to any specified goal within the mapped environment while performing dynamic obstacle avoidance.
+* Localization: Employs the AMCL (Adaptive Monte Carlo Localization) package to track the robot's position on the map.
 
 # System Requirements
 
@@ -61,25 +61,31 @@ Follow these steps each time you want to run the simulation.
 * Navigate to your Workspace:
 Open a new terminal and change to your workspace directory.
 
-```cd ~/butler_robot_ws```
+```
+cd ~/butler_robot_ws
+```
 
 * Source the Setup File:
 You must source the workspace's setup file to make its packages available in the terminal.
 
-```source install/setup.bash```
+```
+source install/setup.bash
+```
 
 * Launch the Simulation:
-Run the main launch file to start Gazebo, load the custom restaurent world, and spawn the robot.
+Run the main launch file to start Gazebo, load the custom ```kitchen``` world, and spawn the robot.
 
-```ros2 launch bumperbot_description gazebo.launch.py world_name:=kitchen```
+```
+ros2 launch bumperbot_description gazebo.launch.py world_name:=kitchen
+```
 
-  * ros2 launch: The command to run a ROS 2 launch file.
+  * ```ros2 launch```: The command to run a ROS 2 launch file.
 
-  * bumperbot_description: The name of the package containing the launch file.
+  * ```bumperbot_description```: The name of the package containing the launch file.
 
-  * gazebo.launch.py: The specific launch file that starts Gazebo and the robot.
+  * ```gazebo.launch.py```: The specific launch file that starts Gazebo and the robot.
 
-  * world_name:=restaurent: An argument passed to the launch file, telling it to load your custom kitchen.world file       instead of a default one.
+  * ```world_name:=kitchen```: An argument passed to the launch file, telling it to load your custom kitchen.world file       instead of a default one.
 
 * Initialize the Robot's Position:
 After launching, RViz will also open. The robot may not know its initial location on the map.
