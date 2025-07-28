@@ -121,7 +121,7 @@ butler_robot_ws/
         ├── worlds/
         │   └── kitchen.world
         │
-        ├── CMakeLists.txt
+        ├── setup.py
         └── package.xml
 
 ```
