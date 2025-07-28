@@ -107,10 +107,21 @@ You can command the robot to move to a location using RViz.
 butler_robot_ws/
 └── src/
     └── bumperbot_description/
-        ├── launch/             # Launch files (e.g., gazebo.launch.py)
-        ├── worlds/             # Gazebo world files (e.g., restaurent.world)
-        ├── maps/               # Nav2 maps and configuration
-        ├── urdf/               # Robot description files
-        ├── rviz/               # Custom RViz configuration files
-        └── package.xml         # Package manifest
+        ├── launch/
+        │   ├── gazebo.launch.py
+        │   └── navigation.launch.py
+        │
+        ├── maps/
+        │   ├── restaurent_map.yaml
+        │   └── restaurent_map.pgm
+        │
+        ├── urdf/
+        │   └── (your_robot.urdf.xacro, etc.)
+        │
+        ├── worlds/
+        │   └── kitchen.world
+        │
+        ├── CMakeLists.txt
+        └── package.xml
+
 ```
