@@ -13,7 +13,7 @@ The repository contains a simulated café environment built in Gazebo, a differe
 
 # System Requirements
 
-1.OS: Ubuntu 20.04 LTS
+"*" OS: Ubuntu 20.04 LTS
 2.ROS 2 Version: ROS 2 Humble Hawksbill
 3.Simulation: Gazebo Fortress
 4.Build Tool: colcon
