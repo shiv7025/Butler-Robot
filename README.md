@@ -33,39 +33,39 @@ Ensure you have a complete installation of ROS 2 Humble on your system.
 * Clone the Repository:
 Create a ROS 2 workspace (e.g., butler_robot_ws) and clone this repository into its src directory.
 
-''' mkdir -p ~/butler_robot_ws/src
+mkdir -p ~/butler_robot_ws/src
 cd ~/butler_robot_ws/src
-git clone <your-repository-url> '''
+git clone <your-repository-url>
 
 * Install Dependencies:
 Navigate to your workspace root and use rosdep to install any missing dependencies.
 
-''' cd ~/butler_robot_ws
-rosdep install --from-paths src -y --ignore-src '''
+ cd ~/butler_robot_ws
+rosdep install --from-paths src -y --ignore-src 
 
 * Build the Workspace:
 Use colcon to build the packages in your workspace. This command compiles the code and generates necessary files.
 
-''' cd ~/butler_robot_ws
-colcon build --symlink-install '''
+ cd ~/butler_robot_ws
+colcon build --symlink-install 
 
 # Usage
 Follow these steps each time you want to run the simulation.
 
 * Navigate to your Workspace:
 Open a new terminal and change to your workspace directory.
-'''
+
 cd ~/butler_robot_ws
-'''
+
 * Source the Setup File:
 You must source the workspace's setup file to make its packages available in the terminal.
 
-'''source install/setup.bash'''
+source install/setup.bash
 
 * Launch the Simulation:
 Run the main launch file to start Gazebo, load the custom restaurent world, and spawn the robot.
 
-'''ros2 launch bumperbot_description gazebo.launch.py world_name:=kitchen'''
+ros2 launch bumperbot_description gazebo.launch.py world_name:=kitchen
 
   * ros2 launch: The command to run a ROS 2 launch file.
 
@@ -90,7 +90,8 @@ You can command the robot to move to a location using RViz.
   * Click and drag on the map to set a destination goal. The robot will begin planning a path and moving towards it.
 
 # Project Structure
-'''
+
+```
 butler_robot_ws/
 └── src/
     └── bumperbot_description/
@@ -100,4 +101,4 @@ butler_robot_ws/
         ├── urdf/               # Robot description files
         ├── rviz/               # Custom RViz configuration files
         └── package.xml         # Package manifest
-'''
+```
